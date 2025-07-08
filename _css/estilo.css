@@ -8,11 +8,14 @@
 
 /* Estilos básicos do corpo da página */
 body {
-  background-color: #dddddd; /* Cor de fundo cinza claro */
-  color: #000000;            /* Cor do texto preta */
-  background-image: url("../_imagens/vetor.jpg"); 
-  
+  background-color: #dddddd;
+  color: #000000;
+  background-image: url("../_imagens/logo2.jpg"); 
+  background-size: contain;
+  background-repeat: no-repeat;
+   
 }
+
  
 
 /* Container principal da interface */
