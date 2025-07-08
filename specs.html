@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Projeto Google Glass</title>
+  <link rel="stylesheet" href="_css/estilo.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Edu+VIC+WANT+Hand+Pre&family=Exo+2:ital,wght@0,100;0,900;1,100;1,900&family=Limelight&family=Montserrat:ital,wght@0,100;0,900;1,100;1,900&family=Open+Sans:ital,wght@0,300;0,800;1,300;1,800&family=Oswald:wght@200;700&family=Roboto+Condensed:ital,wght@0,100;0,900;1,100;1,900&family=Roboto:ital,wght@0,100;0,900;1,100;1,900&display=swap" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="_css/specs.css"/>
+</head>
+<script language="javascript" src="_javascript/funcoes.js"></script>
+<body>
+  <div id="interface">
+    <header id="cabecalho">
+      <section>
+        <h1>Google Glass</h1>
+        <h2><span>A revolução do Google está chegando</span></h2>
+      </section>
+      <img id="icone" src="_imagens/glass-oculos-preto-peq.png" alt="Ícone do Google Glass" />
+      <nav id="menu">
+        <h1>Menu Principal</h1>
+        <ul>
+          <li onmouseover="mudafoto('_imagens/home.png')" onmouseout="mudafoto('_imagens/especificacoes.png')"><a href="index.html">Home</a></li>
+          <li onmouseover="mudafoto('_imagens/especificacoes.png')"onmouseout="mudafoto('_imagens/especificacoes.png')"><a href="specs.html">Especificações</a></li>
+          <li onmouseover="mudafoto('_imagens/fotos.png')"onmouseout="mudafoto('_imagens/especificacoes.png')"><a href="fotos.html">Fotos</a></li>
+          <li onmouseover="mudafoto('_imagens/multimidia.png')"onmouseout="mudafoto('_imagens/especificacoes.png')"><a href="multimidia.html">Multimídia</a></li>
+          <li onmouseover="mudafoto('_imagens/contato.png')" onmouseout="mudafoto('_imagens/especificacoes.png')"><a href="fale-conosco.html">Fale conosco</a></li>
+        </ul>
+      </nav>
+    </header>
+
+<section id=corpo-full> 
+   <article id="notícia-principal">
+        <header id="cabecalho-artigo">
+          <section id="conteudo">
+            <h3>Glass > Especificações</h3>
+            <h1>Raio-X no Google Glass</h1>
+            <h2>Por Matheus Mariano</h2>
+            <h3 class="direita">Atualizado em 23/06/2025</h3>
+          </section>
+        </header>
+  
+<p>  Clique em qualquer área destacada da imagem para ter mais informações sobre os recursos do Google Glass. Qualquer ponto vermelho vai te levar a um lugar cheio de novas informações. </p>
+
+<section id=conteudo>  
+ <img src="_imagens/glass-esquema-marcado.jpg" usemap="#meumapa"/>
+ <map name="meumapa">
+  <area shape="rect" coords="180,204,270,256" href="google-glass.html#tela" target="janela"/>
+  <area shape="circle" coords="157,242,22,12" href="google-glass.html#camera" target="janela"/>
+   <area shape="circle" coords="76,50,22,12" href="google-glass.html#gadgets" target="janela"/>
+    <area shape="poly" coords="28,143,83,216,84,249,27,169 " href="google-glass.html#sensores" target="janela"/>
+ </map>
+ <iframe src="google-glass.html" name="janela" id="frame-spec"></iframe>
+</section>
+   </article>
+ </section>
+    <footer id="rodape">
+      <p><strong>Copyright 2025 &trade; - by Matheus Mariano</strong></p>
+      <p><a href="https://www.facebook.com/matheus.mariano.353803">Facebook</a> |
+        <a href="https://www.instagram.com/mariano.7k/">Instagram</a></p>
+      <p>Todos os direitos reservados</p>
+    </footer>
+  </div>
+</body>
+
+</html>

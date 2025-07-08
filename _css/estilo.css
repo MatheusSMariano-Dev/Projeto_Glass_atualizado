@@ -1,0 +1,424 @@
+@charset "utf-8"; /* Define a codificação dos caracteres do arquivo como UTF-8 */
+
+/* Define fonte personalizada "Glass" carregada do arquivo .ttf */
+@font-face {
+  font-family: "Glass";
+  src: url("../_fontes/glass.ttf") format("truetype");
+}
+
+/* Estilos básicos do corpo da página */
+body {
+  background-color: #dddddd; /* Cor de fundo cinza claro */
+  color: #000000;            /* Cor do texto preta */
+  background-image: url("../_imagens/vetor.jpg"); 
+  
+}
+ 
+
+/* Container principal da interface */
+div#interface {
+  width: 100%;               /* Ocupa 100% da largura da tela */
+  max-width: 1090px;         /* Limita a largura máxima a 1090px */
+  background-color: #ffffff; /* Fundo branco */
+  margin: auto;              /* Centraliza horizontalmente */
+  box-shadow: 0px 0px 10px black; /* Sombra em volta para destaque */
+  padding: 10px;             /* Espaçamento interno */
+}
+
+/* Estilo padrão para parágrafos */
+p {
+  font-family: Arial, sans-serif; /* Fonte Arial ou similar */
+}
+
+/* Estilo para links */
+a {
+  color: #606060;            /* Cor cinza escuro */
+  text-decoration: none;     /* Remove sublinhado padrão */
+}
+
+/* Estilo para links ao passar o mouse */
+a:hover {
+  text-decoration: underline; /* Sublinhado ao passar o mouse */
+}
+
+/* Estilo do cabeçalho principal */
+header#cabecalho {
+  border-bottom: 1px solid #606060; /* Linha inferior cinza escuro */
+  height: 150px;                     /* Altura fixa */
+  background: url("../_imagens/glass-logo-peq.jpg") no-repeat 0px 80px; /* Imagem de fundo posicionada */
+  position: relative;                /* Para posicionamento absoluto de filhos */
+}
+
+/* Ícone dentro do cabeçalho */
+header#cabecalho img#icone {
+  position: absolute; /* Posicionado relativo ao pai */
+  left: 850px;        /* Distância da esquerda */
+  top: 10px;          /* Distância do topo */
+}
+
+/* Título principal do cabeçalho */
+header#cabecalho h1 {
+  font-family: 'Glass', sans-serif;               /* Fonte personalizada */
+  font-size: 20pt;                                /* Tamanho da fonte */
+  color: #f5edf0;                                 /* Cor clara */
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, .6);    /* Sombra para contraste */
+  margin-bottom: 0px;                             /* Sem margem inferior */
+}
+
+/* Subtítulo do cabeçalho */
+header#cabecalho h2 {
+  font-family: 'Glass', sans-serif; /* Mesma fonte personalizada */
+  color: #888888;                   /* Cinza médio */
+  font-size: 15pt;                 /* Tamanho da fonte */
+  margin-top: 0px;                 /* Sem margem superior */
+}
+
+/* Estilos para imagens com legenda */
+figure.foto-legenda {
+  position: relative;                     /* Para posicionar figcaption */
+  border: 8px solid #221831;              /* Borda roxa escura */
+  box-shadow: 1px 1px 4px #9c93e5;       /* Sombra azul suave */
+}
+
+/* Imagem dentro da figura */
+figure.foto-legenda img {
+  width: 100%;    /* Ocupa toda a largura do container */
+  height: 100%;   /* Ocupa toda a altura do container */
+}
+
+/* Legenda da figura inicialmente invisível */
+figure.foto-legenda figcaption {
+  opacity: 0;                                  /* Transparente */
+  position: absolute;                          /* Sobreposta à imagem */
+  top: 0px;                                   
+  background-color: rgba(0, 0, 0, .4);        /* Fundo preto semi-transparente */
+  color: white;                               /* Texto branco */
+  width: 100%;                               /* Ocupa largura total */
+  height: 100%;                              /* Ocupa altura total */
+  padding: 10px;                             /* Espaçamento interno */
+  box-sizing: border-box;                    /* Inclui padding na largura */
+  transition: 1s;                           /* Animação suave da opacidade */
+}
+
+/* Ao passar o mouse sobre a figura, mostra a legenda */
+figure.foto-legenda:hover figcaption {
+  opacity: 1;
+}
+
+/* Menu de navegação principal */
+nav#menu {
+  display: block;
+}
+
+/* Lista do menu */
+nav#menu ul {
+  list-style: none;         /* Remove marcadores */
+  text-transform: uppercase; /* Letras maiúsculas */
+  position: absolute;        /* Posicionado absoluto */
+  top: -48px;                /* Ajuste vertical */
+  left: 240px;               /* Ajuste horizontal */
+}
+
+/* Itens do menu */
+nav#menu li {
+  display: inline-block;        /* Em linha, mas com propriedades de bloco */
+  background-color: #dddddd;    /* Fundo cinza claro */
+  padding: 10px;                /* Espaçamento interno */
+  margin: 2px;                  /* Espaçamento externo */
+  transition: background-color 0.2s ease-in-out; /* Transição suave na cor */
+}
+
+/* Item do menu ao passar o mouse */
+nav#menu li:hover {
+  background-color: #b8aeae; /* Fundo cinza médio */
+}
+
+/* Esconde o título do menu para leitores de tela */
+nav#menu h1 {
+  display: none;
+}
+
+/* Link dentro do item do menu ao passar o mouse */
+nav#menu li:hover a {
+  color: #ffffff;            /* Cor branca */
+  text-decoration: underline; /* Sublinhado */
+}
+
+/* Conteúdo principal */
+section#corpo {
+  display: block;
+  width: 510px;                   /* Largura fixa */
+  float: left;                   /* Alinha à esquerda */
+  border-right: 1px solid #606060; /* Borda direita cinza */
+  padding-right: 10px;           /* Espaçamento interno à direita */
+}
+
+/* Estilo do subtítulo dentro do artigo principal */
+article#notícia-principal h2 {
+  font-size: 13px;               /* Tamanho pequeno */
+  color: #606060;                /* Cinza escuro */
+  background-color: #cecece;     /* Fundo cinza claro */
+  padding: 5px 0 5px 10px;       /* Espaçamento (top 5px, direita 0, baixo 5px, esquerda 10px) */
+  margin: 10px 0;               /* Margem vertical de 10px */
+}
+
+/* Título principal do cabeçalho do artigo */
+header#cabecalho-artigo h1 {
+  font-family: Arial, sans-serif;
+  font-size: 20pt;
+  color: #606060;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+/* Subtítulo do cabeçalho do artigo */
+header#cabecalho-artigo h2 {
+  font-family: Arial, sans-serif;
+  font-size: 13pt;
+  color: #606060;
+  font-style: italic;           /* Texto em itálico */
+  margin: 0px;
+}
+
+/* Terceiro nível do cabeçalho do artigo */
+header#cabecalho-artigo h3 {
+  font-family: Arial, sans-serif;
+  font-size: 12pt;
+  color: #606060;
+  margin-top: auto;             /* Margem automática superior */
+}
+
+/* Classe para alinhamento à direita */
+.direita {
+   text-align: right;
+  
+}
+aside#glass-info {
+  float: right;
+  width: 549px; /* mais leve que o lateral */
+  background-color: #eeeeee;
+  padding: 10px;
+  margin-top: 12px;
+  margin-right: 20px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+}
+
+
+/* Estilo para tabela de especificações */
+table#tabelaspecs {
+  border: 1px solid #606060; /* Borda cinza */
+  border-spacing: 0px;       /* Sem espaçamento entre células */
+  margin: auto;              /* Centraliza horizontalmente */
+}
+
+/* Células da tabela */
+table#tabelaspecs td {
+  border: 1px solid #606060;
+  padding: 10px;             /* Espaçamento interno */
+  text-align: center;
+  vertical-align: middle;    /* Alinha conteúdo verticalmente ao meio */
+}
+
+/* Células com classe "ce" (ex: títulos das linhas) */
+table#tabelaspecs td.ce {
+  color: white;
+  background-color: #606060; /* Fundo cinza escuro */
+  vertical-align: top;       /* Alinha conteúdo ao topo verticalmente */
+  font-weight: bold;         /* Texto em negrito */
+}
+
+/* Células com classe "cd" (ex: conteúdo das linhas) */
+table#tabelaspecs td.cd {
+  background-color: #cecece; /* Fundo cinza claro */
+}
+
+/* Legenda da tabela */
+table#tabelaspecs caption {
+  color: rgb(104, 104, 104); /* Cinza escuro */
+  font-size: 15px;
+  font-weight: bolder;
+}
+
+/* Elementos dentro da legenda da tabela */
+table#tabelaspecs caption span {
+  display: block;           /* Força que seja bloco */
+  float: right;             /* Flutua à direita */
+  color: #000000;           /* Preto */
+  font-size: 8px;           /* Pequeno */
+  margin-top: 10px;         /* Espaço acima */
+}
+ figure#fotospecs {
+  width: 400px;           /* largura fixa (ajuste o valor) */
+  margin-left: 50px;      /* empurra para a direita */
+  margin-right: 0;
+  
+}
+
+
+figure#fotospecs img {
+  width: 400px;          /* A imagem vai ocupar 100% do espaço do figure */
+  height: auto;         /* Mantém proporção da imagem */
+border-radius: 20px;
+border: #eeeeee  solid 7px;
+transition: all 0.3s ease-in-out;
+
+}
+figure#fotospecs img:hover { /* Sombra ao passar o mouse */
+transform: scale(1.10);
+
+
+}
+/* Barra lateral (aside) */
+aside#lateral {
+  display: block;
+  width: 430px;                 /* Largura fixa */
+  float: right;                /* Alinha à direita */
+  margin-top: 2pt;
+  margin-bottom: 40px;
+  margin-right: 16px;          /* Espaçamento à direita */
+  background-color: #dddddd;   /* Fundo cinza claro */
+  padding-right: 85pt;
+  padding-left: 8px;
+  padding-top: 12px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5); /* Sombra suave */
+}
+
+/* Título principal da barra lateral */
+aside#lateral h1 {
+  font-family: Arial, sans-serif;
+  font-size: 20pt;
+  color: #cecece;             /* Cinza claro */
+  background-color: #606060;  /* Fundo cinza escuro */
+}
+
+/* Subtítulo da barra lateral */
+aside#lateral h2 {
+  font-family: Arial, sans-serif;
+  font-size: 13pt;
+  color: #ffffff;             /* Branco */
+  background-color: #606060;  /* Fundo cinza escuro */
+  padding: 5px;
+}
+
+/* Estilo específico para texto com id video-italic */
+#video-italic {
+  font-family: Arial, sans-serif;
+  font-style: italic;
+  color: #606060;             /* Cinza escuro */
+  background-color: #cecece;  /* Fundo cinza claro */
+}
+
+/* Estilo para texto com id novidades */
+#novidades {
+  font-family: Arial, sans-serif;
+  font-style: italic;
+  color: #606060;
+}
+
+/* Parágrafos dentro da seção corpo */
+section#corpo p {
+  text-indent: 50px; /* Indenta a primeira linha do parágrafo */
+}
+
+/* Negritos dentro da seção corpo também indentados */
+section#corpo b {
+  text-indent: 50px;
+}
+
+/* Rodapé da página */
+footer#rodape {
+  clear: both;                 /* Limpa floats para aparecer abaixo deles */
+  border-top: 1px solid black; /* Linha preta superior */
+  text-align: center;          /* Centraliza texto */
+}
+
+
+#video-1{
+width: 100%; /* Largura total do container */
+margin: 0 auto; /* Sem margem */
+box-shadow: 2px 2px 2px #000000; /* Sombra preta suave */
+border: 1px solid #000000; /* Borda preta */
+background-color: rgb(110, 104, 104); 
+padding: 3px; 
+transition: 0.4s ease-in-out;
+}
+
+#video-1:hover{
+transform: scale(1.01);
+
+}
+
+#video-2{
+width: 100%; /* Largura total do container */
+max-width: 800px;
+margin: 0 auto; /* Sem margem */
+box-shadow:2px 2px 2px #000000; /* Sombra preta suave */
+border: 1px solid #000000; /* Borda preta */
+background-color: rgb(110, 104, 104); 
+padding: 3px; 
+transition: 0.4s ease-in-out;
+
+}
+#video-2:hover{
+transform: scale(1.01);
+}
+@media screen and (max-width: 768px) {
+  /* Tornar layout empilhado */
+  section#corpo,
+  aside#lateral,
+  aside#glass-info {
+    width: 100%;
+    float: none;
+    margin: 10px 0;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  /* Ícone centralizado no topo */
+  header#cabecalho img#icone {
+    position: static;
+    display: block;
+    margin: 10px auto;
+  }
+
+  /* Menu em coluna, centralizado */
+  nav#menu ul {
+    position: static;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin: 20px 0;
+  }
+
+  nav#menu li {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Tabela adaptável */
+  table#tabelaspecs {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  /* Imagem da seção specs */
+  figure#fotospecs,
+  figure#fotospecs img {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  /* Vídeos com largura total */
+  #video-1,
+  #video-2 {
+    width: 100% !important;
+  }
+
+  /* Rodapé mais legível */
+  footer#rodape {
+    font-size: 14px;
+    padding: 10px;
+  }
+}

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<!-- Define que o documento é HTML5 -->
+<html lang="pt-br">
+  <!-- Define o idioma da página como português do Brasil -->
+  <head>
+    <meta charset="utf-8" />
+    <!-- Define a codificação de caracteres como UTF-8 -->
+    <title>Projeto Google Glass</title>
+    <!-- Título da página que aparece na aba do navegador -->
+    <link rel="stylesheet" href="_css/estilo.css" />
+    <!-- Link para o arquivo externo de CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Edu+VIC+WANT+Hand+Pre&family=Exo+2:ital,wght@0,100;0,900;1,100;1,900&family=Limelight&family=Montserrat:ital,wght@0,100;0,900;1,100;1,900&family=Open+Sans:ital,wght@0,300;0,800;1,300;1,800&family=Oswald:wght@200;700&family=Roboto+Condensed:ital,wght@0,100;0,900;1,100;1,900&family=Roboto:ital,wght@0,100;0,900;1,100;1,900&display=swap" rel="stylesheet" />
+    <!-- Link para fontes do Google Fonts para estilização tipográfica -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Meta tag para garantir responsividade em dispositivos móveis -->
+  </head>
+
+  <!-- Inclusão de arquivo JavaScript externo -->
+ 
+</script>
+  <body>
+    <!-- Container principal da página -->
+    <div id="interface">
+
+      <!-- Cabeçalho da página -->
+      <header id="cabecalho">
+        <section>
+          <h1>Google Glass</h1>
+          <!-- Título principal do site -->
+          <h2><span>A revolução do Google está chegando</span></h2>
+          <!-- Subtítulo destacado -->
+        </section>
+
+        <!-- Imagem do ícone do Google Glass -->
+        <img id="icone" src="_imagens/glass-oculos-preto-peq.png" alt="Ícone do Google Glass" />
+
+        <!-- Menu de navegação principal -->
+        <nav id="menu">
+          <h1>Menu Principal</h1>
+          <ul>
+            <!-- Itens do menu com eventos de mouse para trocar a imagem do ícone -->
+            <li onmouseover="mudafoto('_imagens/home.png')" onmouseout="mudafoto('_imagens/glass-oculos-preto-peq.png')"><a href="index.html">Home</a></li>
+            <li onmouseover="mudafoto('_imagens/especificacoes.png')" onmouseout="mudafoto('_imagens/glass-oculos-preto-peq.png')"><a href="specs.html">Especificações</a></li>
+            <li onmouseover="mudafoto('_imagens/fotos.png')" onmouseout="mudafoto('_imagens/glass-oculos-preto-peq.png')"><a href="fotos.html">Fotos</a></li>
+            <li onmouseover="mudafoto('_imagens/multimidia.png')" onmouseout="mudafoto('_imagens/glass-oculos-preto-peq.png')"><a href="multimidia.html">Multimídia</a></li>
+            <li onmouseover="mudafoto('_imagens/contato.png')" onmouseout="mudafoto('_imagens/glass-oculos-preto-peq.png')"><a href="fale-conosco.html">Fale conosco</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <!-- Seção principal do conteúdo -->
+      <section id="corpo">
+
+        <!-- Artigo principal da página -->
+        <article id="notícia-principal">
+
+          <!-- Cabeçalho do artigo -->
+          <header id="cabecalho-artigo">
+
+            <!-- Seção com o conteúdo do cabeçalho -->
+            <section id="conteudo">
+              <h3>Tecnologia > Inovações</h3>
+              <!-- Categoria ou caminho de navegação -->
+              <h1>Saiba tudo sobre o Google Glass</h1>
+              <!-- Título do artigo -->
+              <h2>Por Matheus Mariano</h2>
+              <!-- Autor do artigo -->
+              <h3 class="direita">Atualizado em 20/Abril/2025</h3>
+              <!-- Data de atualização alinhada à direita -->
+            </section>
+          </header>
+
+          <!-- Segundo cabeçalho com introdução -->
+          <header id="cabecalho2">
+            <h2>O que é</h2>
+            <p>
+              <strong>
+                O <em>Google Glass</em> é um acessório em forma de óculos que possibilita a interação dos usuários com diversos conteúdos em realidade aumentada. Também chamado de <a href="https://www.youtube.com" target="_blank">Project Glass</a>, o eletrônico é capaz de tirar fotos a partir de comandos de voz, enviar mensagens instantâneas e realizar videoconferências. Seu lançamento está previsto para 2014, e seu preço deve ser de US$ 1,5 mil. Atualmente o Google Glass encontra-se em fase de testes e já possui um vídeo totalmente gravado com o dispositivo. Além disso, a companhia de buscas registrou novas patentes anti-furto e de desbloqueio de tela para o acessório.
+              </strong>
+            </p>
+            <!-- Parágrafo com informações e link externo para o YouTube -->
+          </header>
+
+          <!-- Figura com imagem e legenda -->
+          <figure class="foto-legenda">
+            <img src="_imagens/glass-quadro-homem-mulher.jpg" alt="Google Glass em uso" />
+            <!-- Imagem ilustrativa -->
+            <figcaption>
+              <h3>O Google Glass</h3>
+              <p>Uma nova maneira de ver o mundo</p>
+              <!-- Legenda da imagem -->
+            </figcaption>
+          </figure>
+
+          <!-- Seção com título secundário -->
+          <h2>Data de lançamento</h2>
+          <p>Não há uma data específica e oficial para o dispositivo ser lançado, ainda. Pode ser que ele esteja disponível em demonstrações a partir de 2013, mas seu lançamento para as lojas fica para, pelo menos, 2014.</p>
+
+          <!-- Seção de especificações técnicas com tabela -->
+          <h2>Especificações Técnicas</h2>
+          <table id="tabelaspecs">
+            <caption>Técnica do Google Glass <span>Jun/2025</span></caption>
+            <!-- Legenda da tabela -->
+            <tr>
+              <td class="ce">Tela</td>
+              <td class="cd">Resolução equivalente a tela de 25"</td>
+            </tr>
+            <tr>
+              <td rowspan="2" class="ce">Câmera</td>
+              <td class="cd">5MP para fotos</td>
+            </tr>
+            <tr>
+              <td class="cd">720p para vídeos</td>
+            </tr>
+            <tr>
+              <td rowspan="2" class="ce">Conectividade</td>
+              <td class="cd">Wi-Fi</td>
+            </tr>
+            <tr>
+              <td class="cd">Bluetooth</td>
+            </tr>
+            <tr>
+              <td class="ce">Memória Interna</td>
+              <td class="cd">12GB</td>
+            </tr>
+          </table>
+
+           <figure id=fotospecs>
+        <img src="_imagens/specs-google3.png" alt="Google glass specs"/>
+        
+        
+      </figure>
+        </article>
+      </section>
+      
+      
+
+      <!-- Barra lateral com outras notícias -->
+      <aside id="lateral">
+        <h1>Outras Notícias</h1>
+        <h2 id="video-italic">Vídeo mais recente</h2>
+        <div>
+          <video id="video-2" controls poster="_imagens/video-mini03.jpg">
+            <source src="_media/one-day.mp4" type="video/mp4"/>
+            <source src="_media/one-day.webm" type="video/webm"/>
+            <source src="_media/one-day.ogg" type="video/ogg"/>
+            <!-- Fontes de vídeo em diferentes formatos para compatibilidade -->
+            Seu navegador não suporta o elemento de vídeo.
+        </div>
+        <h2 id="novidades">Novidades no Glass</h2>
+        <p>
+          <strong>O Google enfim revelou as especificações completas do Google Glass, e com ele uma surpresa ainda inédita no mercado: a gigante das buscas usará um sistema de áudio baseado na transdução por condução. Através das hastes dos óculos, o som será transmitido para o ouvido do usuário por meio de microvibrações em determinados ossos de sua cabeça, sem usar nenhum tipo de alto-falante.</strong>
+        </p>
+        <p>
+          Além da surpresa do áudio, a tela montada à frente do olho do usuário também chamou atenção. Serão 640 x 360 pixels de resolução que, em proporção, equivaleria a um monitor de 25 polegadas de alta definição colocado a 2,5 metros de distância do espectador.
+        </p>
+      </aside>
+  <aside id="glass-info">
+  <h2>Como funciona</h2>
+  <p>De acordo com fontes próximas do Google...</p>
+
+  <h2>O que você pode fazer com o Google Glasses</h2>
+  <p>O vídeo de divulgação do Google mostra que você pode se transformar...</p>
+
+  <video id="video-1" controls poster="_imagens/video-mini02.jpg"> 
+    <source src="_media/how-it-feels.mp4 " type="video/mp4"/>
+    <source src="_media/how-it-feels.webm" type="video/webm"/>
+    <source src="_media/how-it-feels.ogg" type="video/ogg"/>
+    Seu navegador não suporta o elemento de vídeo.
+  </video>
+</aside>
+      <!-- Rodapé da página -->
+      <footer id="rodape">
+        <p><strong>Copyright 2025 &trade; - by Matheus Mariano</strong></p>
+        <p>
+          <a href="https://www.facebook.com/matheus.mariano.353803">Facebook</a> |
+          <a href="https://www.instagram.com/mariano.7k/">Instagram</a>
+        </p>
+        <p>Todos os direitos reservados</p>
+      </footer>
+
+    </div>
+  </body>
+</html>

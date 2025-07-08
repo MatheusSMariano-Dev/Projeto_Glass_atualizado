@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Projeto Google Glass</title>
+  <link rel="stylesheet" href="_css/estilo.css" />
+  <link rel="stylesheet" href="_css/form.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Edu+VIC+WANT+Hand+Pre&family=Exo+2:ital,wght@0,100;0,900;1,100;1,900&family=Limelight&family=Montserrat:ital,wght@0,100;0,900;1,100;1,900&family=Open+Sans:ital,wght@0,300;0,800;1,300;1,800&family=Oswald:wght@200;700&family=Roboto+Condensed:ital,wght@0,100;0,900;1,100;1,900&family=Roboto:ital,wght@0,100;0,900;1,100;1,900&display=swap" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<script language="javascript" src="_javascript/funcoes.js"></script>
+<body>
+  <div id="interface">
+    <header id="cabecalho">
+      <section>
+        <h1>Google Glass</h1>
+        <h2><span>A revolução do Google está chegando</span></h2>
+      </section>
+      <img id="icone" src="_imagens/glass-oculos-preto-peq.png" alt="Ícone do Google Glass" />
+      <nav id="menu">
+        <h1>Menu Principal</h1>
+        <ul>
+          <li onmouseover="mudafoto('_imagens/home.png')" onmouseout="mudafoto('_imagens/contato.png')"><a href="index.html">Home</a></li>
+          <li onmouseover="mudafoto('_imagens/especificacoes.png')"onmouseout="mudafoto('_imagens/contato.png')"><a href="specs.html">Especificações</a></li>
+          <li onmouseover="mudafoto('_imagens/fotos.png')"onmouseout="mudafoto('_imagens/contato.png')"><a href="fotos.html">Fotos</a></li>
+          <li onmouseover="mudafoto('_imagens/multimidia.png')"onmouseout="mudafoto('_imagens/contato.png')"><a href="multimidia.html">Multimídia</a></li>
+          <li onmouseover="mudafoto('_imagens/contato.png')" onmouseout="mudafoto('_imagens/contato.png')"><a href="fale-conosco.html">Fale conosco</a></li>
+        </ul>
+      </nav>
+      </header>
+      <hgroup>
+<section id="corpo-full">Fale Conosco > Contato
+<article id="noticia-principal"> 
+<header id="cabecalho-artigo" > 
+<h1>Formulário de Contato</h1> 
+<h2>Por Matheus Mariano</h2> 
+<h3 class="direita">Atualizado em 06/07/2025</h3>   
+      </hgroup>
+     </header>
+ 
+
+<form method="post" id="fcontato" action="mailto:contato@cursoemvideo.com" oninput="calc_total();"> 
+<fieldset id="usuario"> 
+  <legend>Identificação do Usuário</legend>  
+  
+  <p>
+    <label for="cname">Nome:</label> 
+    <input type="text" name="tname" id="cname" size="30" maxlength="26" placeholder="Nome completo"> 
+  </p> 
+  
+  <p>
+    <label for="csenha">Senha:</label> 
+    <input type="password" name="tsenha" id="csenha" size="8" maxlength="8" placeholder="8 dígitos"/>
+  </p>
+  
+  <p>
+    <label for="cmail">E-mail:</label> 
+    <input type="email" name="tmail" id="cmail" size="20" maxlength="30" placeholder="Informe seu email"/>
+  </p>
+  
+  <fieldset id="sexo"> 
+    <legend>Sexo:</legend>  
+    <input type="radio" name="csexo" id="tmasc" checked /> 
+    <label for="tmasc">Masculino</label> <br>   
+    <input type="radio" name="csexo" id="tfem" /> 
+    <label for="tfem">Feminino</label>
+  </fieldset>
+  
+  <p>
+    <label for="ddate">Data de Nascimento:</label> 
+    <input type="date" name="date" id="ddate" /> 
+  </p> 
+</fieldset>
+
+
+<fieldset id="endereco"> <legend>Endereço do Usuário</legend>  
+    <p>Logradouro: <input type="text" name=trua id="crua" size="20" maxlength="80" placeholder="Rua,Avenida,Travessa" /> </p> 
+    <p>Número: <input type="number" name="tnum" id="cnum" min="0" max="100000"/> </p> 
+    <p><label for="cest">Estado:</label>  
+    <select name="test" id="cest">
+  <!-- Cidades do Nordeste -->
+  <optgroup label="Estados do Nordeste">
+  <option value="ba">Bahia</option>
+  <option value="pe">Pernambuco</option>
+  <option value="ce">Ceará</option>
+  <option value="rn">Rio Grande do Norte</option>
+  <option value="ma">Maranhão</option>
+</optgroup>
+
+<optgroup label="Estados do Norte">
+  <option value="am">Amazonas</option>
+  <option value="pa">Pará</option>
+  <option value="ro">Rondônia</option>
+  <option value="to">Tocantins</option>
+  <option value="rr">Roraima</option>
+</optgroup>
+
+
+    </select> </p>
+    <label for="ccid">Cidade:</label>
+    <input type="text" name="tcid"id=ccid maxlength="40" size="20" placeholder="Sua cidade" list="Cidades">
+    <datalist id="Cidades">
+      <option value="Salvador"></option>
+      <option value="Lauro De Freitas"></option>
+      <option value="Simoes filhos"></option>
+      <option value="Ilhéus"></option>
+
+
+    </datalist>
+</fieldset>
+<fieldset id="mensagem"> <legend>Mensagem do Usuário</legend> 
+    <p><label for="curg">  Grau de Urgência:</label>
+    0<input type="range" name="turg" id="curg" min="0" max="10" step="2" />10</p> 
+    <p><label for="msg">Mensagem:</label>
+    <textarea name="tmsg" id="msg" cols="36" rows="5" placeholder="Deixe Aqui Sua Mensagem"></textarea> </p>
+</fieldset>
+<fieldset id="pedido"> <legend>Quero um Google Glass</legend>  
+    <p> <input type="checkbox" name="tbox" id="cbox" checked/>
+      <label for= "cbox">Gostaria de adquirir um Google Glass quando disponível</label></p> 
+    <p><label for="ccor">Cor:</label>
+    <input type="color" name="tcor" id="ccor" value="#eeeeee" /></p> 
+    <p><label for="cqtd">Quantidade:</label>
+    <input type="number" name="tqtd" id="cqtd" min="0" max="20" value="0"/></p> 
+    <p><label for="ctot">Preço Total: R$</label> 
+     <input type="text" name="ttot" id="ctot" size="1" value="0" readonly/></p> 
+</fieldset>
+ 
+<input type="image" src="_imagens/botao-enviar.png" />
+</form>
+  <footer id="rodape">
+      <p><strong>Copyright 2025 &trade; - by Matheus Mariano</strong></p>
+      <p><a href="https://www.facebook.com/matheus.mariano.353803">Facebook</a> |
+        <a href="https://www.instagram.com/mariano.7k/">Instagram</a></p>
+      <p>Todos os direitos reservados</p>
+    </footer>
+  </div>
+</body>
+
+</html>
